@@ -47,16 +47,16 @@ The ML layer is good at "does this feel risky?"; the rule layer is good at "whic
 ##  Application Preview
 
 ### Home Page
-![AI Debugger Pro - Home Page]<img width="787" height="434" alt="a" src="https://github.com/user-attachments/assets/bcfb75ef-a6f2-4890-94f6-e4afb84f1f15" />
+<img width="787" height="434" alt="a" src="https://github.com/user-attachments/assets/bcfb75ef-a6f2-4890-94f6-e4afb84f1f15" />
 
 ### Code Debugger
-![AI Debugger Pro - Debugger]<img width="522" height="350" alt="php 1" src="https://github.com/user-attachments/assets/bc019165-70f5-4c3b-9be2-79c01dda765d" />
+<img width="522" height="350" alt="php 1" src="https://github.com/user-attachments/assets/bc019165-70f5-4c3b-9be2-79c01dda765d" />
 
 ### Learn Page
-![AI Debugger Pro - Learn]<img width="553" height="406" alt="learn" src="https://github.com/user-attachments/assets/9bb670c0-8ce9-4b20-9e07-12ae9eaf1ff9" />
+<img width="553" height="406" alt="learn" src="https://github.com/user-attachments/assets/9bb670c0-8ce9-4b20-9e07-12ae9eaf1ff9" />
 
 ### Reports Page
-![AI Debugger Pro - Reports]<img width="530" height="392" alt="js 6" src="https://github.com/user-attachments/assets/9e1e2241-8877-41cf-ab27-0be177a9f724" />
+<img width="530" height="392" alt="js 6" src="https://github.com/user-attachments/assets/9e1e2241-8877-41cf-ab27-0be177a9f724" />
 
 
 ###  Reports Page
