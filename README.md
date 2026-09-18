@@ -50,17 +50,22 @@ The ML layer is good at "does this feel risky?"; the rule layer is good at "whic
 Screenshots are not yet included in this repository. Once added, this section should look like:
 
 ```markdown
-### 🏠 Home Page
-![Home Page](screenshots/home.png)
+###  Home Page
+<img width="787" height="434" alt="a" src="https://github.com/user-attachments/assets/bcfb75ef-a6f2-4890-94f6-e4afb84f1f15" />
 
-### 🐞 Debugger Interface
-![Debugger Interface](screenshots/debugger.png)
 
-### 📚 Learn Page
-![Learn Page](screenshots/learn.png)
+###  Debugger Interface
+<img width="522" height="350" alt="php 1" src="https://github.com/user-attachments/assets/bc019165-70f5-4c3b-9be2-79c01dda765d" />
 
-### 📊 Reports Page
-![Reports Page](screenshots/reports.png)
+
+###  Learn Page
+<img width="553" height="406" alt="learn" src="https://github.com/user-attachments/assets/9bb670c0-8ce9-4b20-9e07-12ae9eaf1ff9" />
+
+
+
+###  Reports Page
+<img width="530" height="392" alt="js 6" src="https://github.com/user-attachments/assets/9e1e2241-8877-41cf-ab27-0be177a9f724" />
+
 ```
 
 See **GitHub Setup** below for exactly which files to add and where.
