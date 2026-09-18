@@ -58,10 +58,6 @@ The ML layer is good at "does this feel risky?"; the rule layer is good at "whic
 ### Reports Page
 <img width="530" height="392" alt="js 6" src="https://github.com/user-attachments/assets/9e1e2241-8877-41cf-ab27-0be177a9f724" />
 
-
-###  Reports Page
-<img width="530" height="392" alt="js 6" src="https://github.com/user-attachments/assets/9e1e2241-8877-41cf-ab27-0be177a9f724" />
-
 ```
 
 See **GitHub Setup** below for exactly which files to add and where.
