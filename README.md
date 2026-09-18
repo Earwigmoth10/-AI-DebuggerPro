@@ -46,6 +46,7 @@ The ML layer is good at "does this feel risky?"; the rule layer is good at "whic
 
 ---
 ## Application Preview
+<img width="1536" height="1024" alt="AI Debugger Pro Project Lifecycle" src="https://github.com/user-attachments/assets/738eed6d-2d83-4d49-bdf3-4077bcc407aa" />
 
 ### Home Page
 
