@@ -8,6 +8,7 @@ A web-based code analysis tool that combines a trained machine learning classifi
 ![Status](https://img.shields.io/badge/Status-In%20Development-yellow)
 
 ---
+<img width="1536" height="1024" alt="AI Debugger Pro Project Lifecycle" src="https://github.com/user-attachments/assets/84f63882-f64f-4624-b233-808c64a07f25" />
 
 ## Overview
 
@@ -100,24 +101,6 @@ The ML layer is good at "does this feel risky?"; the rule layer is good at "whic
 </td>
 </tr>
 </table>
-##  Application Preview
-
-### Home Page
-<img width="787" height="434" alt="a" src="https://github.com/user-attachments/assets/bcfb75ef-a6f2-4890-94f6-e4afb84f1f15" />
-
-### Code Debugger
-<img width="522" height="350" alt="php 1" src="https://github.com/user-attachments/assets/bc019165-70f5-4c3b-9be2-79c01dda765d" />
-<img width="520" height="288" alt="js 5" src="https://github.com/user-attachments/assets/a19843e2-ba13-4d6a-9228-1f8853d6d742" />
-
-### Learn Page
-<img width="553" height="406" alt="learn" src="https://github.com/user-attachments/assets/9bb670c0-8ce9-4b20-9e07-12ae9eaf1ff9" />
-<img width="531" height="385" alt="4" src="https://github.com/user-attachments/assets/f31ffb71-fc55-4df8-8af3-37dde1a62954" />
-
-
-### Reports Page
-<img width="530" height="392" alt="js 6" src="https://github.com/user-attachments/assets/9e1e2241-8877-41cf-ab27-0be177a9f724" />
-<img width="524" height="292" alt="js 2" src="https://github.com/user-attachments/assets/4f875baf-464f-4dd4-9fb3-4d10cf28935a" />
-
 
 ```
 
