@@ -106,10 +106,6 @@ The ML layer is good at "does this feel risky?"; the rule layer is good at "whic
 
 ```
 
-See **GitHub Setup** below for exactly which files to add and where.
-
----
-
 ##  Demo
 
 - **Live Demo:** Add your deployed application URL here
@@ -124,25 +120,7 @@ AI Debugger Pro uses a **hybrid code-analysis architecture** that combines a mac
 The ML component provides an overall vulnerability classification and confidence score, while the rule engine identifies specific code-level issues, their severity, affected lines, and suggested fixes.
 
 ```mermaid
-flowchart LR
-
-    U[👤 User] --> FE[ Frontend<br/>debugger.html + debugger.js]
-
-    FE -->|POST /api/debug| API[ Flask Backend<br/>app.py]
-
-    API --> ML[ ML Classifier<br/>model.pkl]
-    API --> RE[ Rule Engine<br/>rules.py]
-
-    ML --> MC[Risk Classification<br/>+ Confidence]
-    RE --> RI[Line-Level Issues<br/>+ Severity + Fixes]
-
-    MC --> COMB[ Result Processing<br/>Combined Analysis + Quality Score]
-    RI --> COMB
-
-    COMB -->|JSON Response| FE
-    FE --> UI[ Analysis Report<br/>Displayed to User]
-
----
+<img width="1086" height="1774" alt="mermaid-diagram" src="https://github.com/user-attachments/assets/d92cb05b-58f3-4f04-bb2d-1cd0ebf35715" />
 
 ## Technology Stack
 
