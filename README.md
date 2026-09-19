@@ -170,7 +170,41 @@ Confidence       Fix Suggestions
           ▼
     Analysis Results
 ```
-
+## Project Architecture / Folder Structure
+```
+debug/
+│
+├── index.html
+├── styles.css
+│
+├── debugger.html
+├── debugger.css
+├── debugger.js
+│
+├── learn.html
+├── learn.css
+├── learn.js
+│
+├── reports.html
+├── reports.css
+├── reports.js
+│
+├── company.html
+├── company.css
+├── company.js
+│
+├── faq.js
+├── README.md
+│
+└── backend/
+    ├── app.py
+    ├── rules.py
+    ├── dataset.py
+    ├── train_model.py
+    │
+    └── model/
+        └── model.pkl
+```
 > **Note:** The training script that produced the production `model.pkl` currently loaded by `app.py` is not included in this repository. `train_model.py` documents a *different, reference* model (multiclass, small hand-written dataset) intended to demonstrate the approach. [Add the actual training script/notebook and dataset source used for `model.pkl` here.]
 
 ---
