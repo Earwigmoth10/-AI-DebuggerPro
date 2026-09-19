@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Reports - AI Debugger Pro</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="reports.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">
+            <i class="fas fa-robot"></i> AI Debugger<span class="highlight">Pro</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html#modules">Modules <i class="fas fa-caret-down"></i></a>
+            <a href="index.html#docs">Docs</a>
+            <a href="index.html#about">About</a>
+        </div>
+        <div class="nav-actions">
+            <a href="index.html" class="btn-signin">Home</a>
+            <a href="debugger.html" class="btn-cta">Try Debugger</a>
+        </div>
+    </div>
+</nav>
+
+<section class="reports-page">
+    <div class="container">
+        <h1 class="reports-title">User <span class="gradient-text">Reports</span></h1>
+        <p class="reports-sub">Your saved debugging history — view, filter, and manage past analyses.</p>
+
+        <div class="storage-notice">
+            <i class="fas fa-circle-info"></i>
+            <span>Reports are currently saved in <strong>this browser's local storage</strong>, not MySQL —
+            no backend needed to use this page right now. Every analysis you run and save on the
+            <a href="debugger.html" style="color:#facc15; text-decoration:underline;">Debugger page</a>
+            appears here automatically. Swap the storage functions in <code>reports.js</code> for
+            <code>fetch()</code> calls to <code>/api/reports</code> whenever your Flask + MySQL backend is ready.</span>
+        </div>
+
+        <div class="reports-summary" id="summaryStrip"></div>
+
+        <div class="reports-toolbar">
+            <div class="toolbar-left">
+                <input type="text" id="searchInput" class="reports-search" placeholder="Search by title or code…">
+                <select id="langFilter" class="reports-filter">
+                    <option value="all">All languages</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="php">PHP</option>
+                    <option value="python">Python</option>
+                    <option value="html">HTML</option>
+                    <option value="sql">SQL</option>
+                </select>
+                <select id="sortFilter" class="reports-filter">
+                    <option value="newest">Newest first</option>
+                    <option value="oldest">Oldest first</option>
+                    <option value="score-high">Highest score</option>
+                    <option value="score-low">Lowest score</option>
+                </select>
+            </div>
+            <div class="toolbar-right">
+                <button id="exportBtn" class="btn-secondary-large btn-small">
+                    <i class="fas fa-download"></i> Export JSON
+                </button>
+                <button id="clearAllBtn" class="btn-secondary-large btn-small">
+                    <i class="fas fa-trash"></i> Clear All
+                </button>
+            </div>
+        </div>
+
+        <div id="reportsList" class="reports-list"></div>
+
+        <div id="emptyState" class="reports-empty" style="display:none;">
+            <i class="fas fa-inbox"></i>
+            <p>No saved reports yet. Run an analysis on the Debugger page and click<br>
+               <strong>"Save to Reports"</strong> to see it show up here.</p>
+            <a href="debugger.html" class="btn-primary-large">Open Debugger</a>
+        </div>
+    </div>
+</section>
+
+<div class="modal-overlay" id="confirmModal">
+    <div class="modal-box">
+        <h3 id="modalTitle">Delete this report?</h3>
+        <p id="modalMsg">This can't be undone.</p>
+        <div class="modal-actions">
+            <button id="modalCancel" class="btn-secondary-large">Cancel</button>
+            <button id="modalConfirm" class="btn-primary-large">Delete</button>
+        </div>
+    </div>
+</div>
+
+<script src="reports.js"></script>
+</body>
+</html>

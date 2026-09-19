@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Debugger - AI Debugger Pro</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="debugger.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">
+            <i class="fas fa-robot"></i> AI Debugger<span class="highlight">Pro</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html#modules">Modules <i class="fas fa-caret-down"></i></a>
+            <a href="index.html#docs">Docs</a>
+            <a href="index.html#about">About</a>
+        </div>
+        <div class="nav-actions">
+            <a href="index.html" class="btn-signin">Home</a>
+        </div>
+    </div>
+</nav>
+
+<section class="debugger-page">
+    <div class="container">
+        <h1 class="dbg-title">AI Code <span class="gradient-text">Debugger</span></h1>
+        <p class="dbg-sub">Paste your code, pick the language, and let the model analyze it.</p>
+
+        <div class="dbg-grid">
+            <div class="dbg-panel">
+                <div class="dbg-panel-head">
+                    <h3><i class="fas fa-code"></i> Your Code</h3>
+                    <select id="language">
+                        <option value="javascript">JavaScript</option>
+                        <option value="php">PHP</option>
+                        <option value="python">Python</option>
+                        <option value="html">HTML</option>
+                        <option value="sql">SQL</option>
+                    </select>
+                </div>
+
+                <textarea id="codeInput" spellcheck="false"
+                    placeholder="// Paste your code here..."></textarea>
+
+                <div class="dbg-actions">
+                    <button id="analyzeBtn" class="btn-primary-large">
+                        <i class="fas fa-bolt"></i> Analyze Code
+                    </button>
+                    <button id="sampleBtn" class="btn-secondary-large">Load Sample</button>
+                    <button id="clearBtn" class="btn-secondary-large">Clear</button>
+                </div>
+            </div>
+
+            <div class="dbg-panel">
+                <div class="dbg-panel-head">
+                    <h3><i class="fas fa-clipboard-check"></i> Analysis Report</h3>
+                    <span id="statusDot" class="status-dot">Checking server…</span>
+                </div>
+                <div class="dbg-actions" id="saveRow" style="display:none; margin-top:0; margin-bottom:1rem;">
+                    <button id="saveReportBtn" class="btn-secondary-large">
+                        <i class="fas fa-floppy-disk"></i> Save to Reports
+                    </button>
+                    <a href="reports.html" class="btn-secondary-large" style="text-decoration:none; text-align:center;">
+                        <i class="fas fa-database"></i> View Reports
+                    </a>
+                </div>
+                <div id="results" class="dbg-results">
+                    <div class="empty-state">
+                        <i class="fas fa-microscope"></i>
+                        <p>Your results will appear here.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="debugger.js"></script>
+</body>
+</html>
