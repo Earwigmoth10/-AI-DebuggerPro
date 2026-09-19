@@ -104,12 +104,10 @@ The ML layer is good at "does this feel risky?"; the rule layer is good at "whic
 </tr>
 </table>
 
-```
-
 ##  Demo
 
 - **Live Demo:** Add your deployed application URL here
-- **GitHub Repository:** Add your GitHub repository URL here
+- **GitHub Repository:** Add your repository URL here
 
 ---
 
@@ -117,58 +115,60 @@ The ML layer is good at "does this feel risky?"; the rule layer is good at "whic
 
 AI Debugger Pro uses a **hybrid code-analysis architecture** that combines a machine-learning classifier with a deterministic rule-based analysis engine.
 
-The ML component provides an overall vulnerability classification and confidence score, while the rule engine identifies specific code-level issues, their severity, affected lines, and suggested fixes.
+The machine-learning component provides the overall vulnerability classification and confidence, while the rule-based engine identifies specific code-level issues, severity levels, affected lines, and suggested fixes.
 
-```mermaid
-<img width="1086" height="1774" alt="mermaid-diagram" src="https://github.com/user-attachments/assets/d92cb05b-58f3-4f04-bb2d-1cd0ebf35715" />
+### Architecture Overview
 
-## Technology Stack
+<img 
+  width="900" 
+  alt="AI Debugger Pro System Architecture" 
+  src="https://github.com/user-attachments/assets/d92cb05b-58f3-4f04-bb2d-1cd0ebf35715" 
+/>
 
-| Category            | Technology                                  |
-|----------------------|----------------------------------------------|
-| Frontend             | HTML5, CSS3, JavaScript (Fetch API)          |
-| Backend              | Flask, Flask-CORS                            |
-| Machine Learning     | scikit-learn (TfidfVectorizer, LogisticRegression), joblib |
-| Static Analysis      | Python `re` (custom regex rule engine)       |
-| Model Persistence    | joblib (`.pkl`)                              |
+*Figure: High-level architecture of the AI Debugger Pro application.*
 
----
+###  Runtime Request Flow
 
-## Project Architecture / Folder Structure
+The following flow represents the **actual runtime interaction** of the application when a user analyzes code:
 
 ```text
-debug/
-│
-├── index.html              # Landing page
-├── styles.css               # Shared site styling
-│
-├── debugger.html            # Code analysis interface
-├── debugger.css
-├── debugger.js               # Calls the Flask API and renders results
-│
-├── learn.html                # [Add description]
-├── learn.css
-├── learn.js
-│
-├── reports.html               # [Add description]
-├── reports.css
-├── reports.js
-│
-├── company.html                # [Add description]
-├── company.css
-├── company.js
-│
-├── faq.js                       # [Add description]
-│
-├── README.md
-│
-└── backend/
-    ├── app.py                    # Flask app: serves frontend + /api/debug, /api/health
-    ├── rules.py                    # Regex-based line-level static analysis engine
-    ├── dataset.py                   # Hand-curated example training data (reference pipeline)
-    ├── train_model.py                # Trains the example multiclass model from dataset.py
-    └── model/
-        └── model.pkl                  # Production model loaded by app.py (binary: clean/vulnerable)
+User
+  │
+  ▼
+Debugger Frontend
+(debugger.html + debugger.js)
+  │
+  │ POST /api/debug
+  ▼
+Flask Backend
+(app.py)
+  │
+  ├───────────────┐
+  ▼               ▼
+ML Model       Rule Engine
+model.pkl      rules.py
+  │               │
+  │               │
+  ▼               ▼
+Vulnerability   Line-level Issues
+Classification   Severity
+Confidence       Fix Suggestions
+  │               │
+  └───────┬───────┘
+          ▼
+   Combined Analysis
+          │
+          ▼
+    Quality Score
+          │
+          ▼
+     JSON Response
+          │
+          ▼
+      Debugger UI
+          │
+          ▼
+    Analysis Results
 ```
 
 > **Note:** The training script that produced the production `model.pkl` currently loaded by `app.py` is not included in this repository. `train_model.py` documents a *different, reference* model (multiclass, small hand-written dataset) intended to demonstrate the approach. [Add the actual training script/notebook and dataset source used for `model.pkl` here.]
