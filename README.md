@@ -394,27 +394,11 @@ The current `model.pkl` is a few megabytes and safe to commit directly to GitHub
 
 ---
 
-## Security / Privacy
-
-Code submitted to `/api/debug` is processed in memory and is not persisted by the API itself. Users should avoid pasting real credentials or secrets into the debugger, even though `rules.py` specifically flags hardcoded credentials as a reminder to remove them. This project makes no security certification or compliance claims.
-
----
-
-##  Contributing
-
-Contributions, issues, and feature requests are welcome.
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push the branch
-5. Open a Pull Request
-
----
-
 ## License
 
-No license file was found in this repository. Please choose a license (e.g., MIT, Apache 2.0) and add a `LICENSE` file to the repository root before publishing publicly.
+This project is licensed under the **MIT License**.
+
+See the [`LICENSE`](LICENSE) file for the full license text.
 
 ---
 
