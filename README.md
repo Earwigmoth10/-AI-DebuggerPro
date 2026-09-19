@@ -110,28 +110,37 @@ See **GitHub Setup** below for exactly which files to add and where.
 
 ---
 
-## Demo
+##  Demo
 
-[🚀 Live Demo](#) — *[Add your deployed link here, if any]*
-[📂 GitHub Repository](#) — *[Add your repository URL here]*
+- **Live Demo:** Add your deployed application URL here
+- **GitHub Repository:** Add your GitHub repository URL here
 
 ---
 
-## System Architecture / Workflow
+##  System Architecture
+
+AI Debugger Pro uses a **hybrid code-analysis architecture** that combines a machine-learning classifier with a deterministic rule-based analysis engine.
+
+The ML component provides an overall vulnerability classification and confidence score, while the rule engine identifies specific code-level issues, their severity, affected lines, and suggested fixes.
 
 ```mermaid
-flowchart TD
-    A[User pastes code in debugger.html] --> B[debugger.js: fetch POST /api/debug]
-    B --> C[Flask app.py]
-    C --> D[ML Pipeline: model.pkl via joblib]
-    C --> E[Rule Engine: rules.py]
-    D --> F[Vulnerability label + confidence %]
-    E --> G[Line-level issues + severity + fix suggestions]
-    F --> H[Combined JSON response + score]
-    G --> H
-    H --> B
-    B --> I[Rendered results in debugger.html]
-```
+flowchart LR
+
+    U[👤 User] --> FE[ Frontend<br/>debugger.html + debugger.js]
+
+    FE -->|POST /api/debug| API[ Flask Backend<br/>app.py]
+
+    API --> ML[ ML Classifier<br/>model.pkl]
+    API --> RE[ Rule Engine<br/>rules.py]
+
+    ML --> MC[Risk Classification<br/>+ Confidence]
+    RE --> RI[Line-Level Issues<br/>+ Severity + Fixes]
+
+    MC --> COMB[ Result Processing<br/>Combined Analysis + Quality Score]
+    RI --> COMB
+
+    COMB -->|JSON Response| FE
+    FE --> UI[ Analysis Report<br/>Displayed to User]
 
 ---
 
