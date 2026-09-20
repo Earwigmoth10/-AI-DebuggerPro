@@ -406,5 +406,5 @@ See the [`LICENSE`](LICENSE) file for the full license text.
 
 **Laiba Aamir**
 
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Add your LinkedIn URL here]
+- GitHub: Earwigmoth10
+- LinkedIn: https://www.linkedin.com/in/laiba-aamir-8b714a301/
